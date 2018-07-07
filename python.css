@@ -1,36 +1,42 @@
 *{
     margin: 0;
     padding: 0;
-    outline: 1px dotted green;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
-#container{
+#container{      /*contains everything*/
     background-color: #245076;
     width: 970px;
     min-height: 400px;
 }
 
-div.header{
+div.header{     /*contains img and search box*/
     display: inline-block;
     width: 100%;
     margin-bottom: 15px;
 }
 
-div.header img{
+div.header img{   /*python img in top left*/
     width: 280px;
     height: auto;
     margin-left: 20px;
 }
 
-.text{
+.text{     /*formats text in top right*/
     margin-top: 5px;
     margin-left: 750px;
     display: inline-block;
     vertical-align: top;
+    color: white;
+    font-size: 14px;
 }
 
-div.searchBox{
-    margin-left: 400px;
+.text a{
+    color: #f6ce31  /*colors text in top right*/
+}
+
+div.searchBox{      /*Search box in top right*/
+    margin-left: 380px;
     display: inline-block;
     width: 250px;
     height: 55px;
@@ -38,50 +44,53 @@ div.searchBox{
     background-color: #444444;
     border-radius: 5px;
     box-shadow: 2px 2px 2px;
+    padding: 0 10px;
 }
 
-.bar{
+.bar{                 /*wraps input and button for search box in top right*/
     display: inline-block;
     margin-top: 15px;
     margin-left: 15px;
 }
 
-.inset{
+.inset{              /*styles search box in top right*/
     padding: 5px;
+    border: 2px solid white;  /*combined with inset, makes that pushed in look on button*/
+    text-align: center;
     border-style: inset;
 }
 
-.button{
+.button{               /*styles button next to search box in top right*/ 
     color: white;
     background-color: #245076;
     border-radius: 5px;
     font-size: 12px;
     padding: 5px;
+    margin-left: 2px;
 }
 
-.nav{
-    padding: 5px 20px;
+.nav{                 /*navigation bar along the top under python img*/
+    padding: 10px 20px;
     border-radius: 5px;
     background: linear-gradient(#3575ad,#437dad,#3575ad);
     box-shadow: 2px 2px 2px;
-    display: table;
+    display: table;  /*along with display:inline, allows horizontal ul li navbar*/
     margin-left: 80px;
     margin-bottom: 15px;
 }
 
-.nav ul li a{
+.nav ul li a{   /*styles nav Bar text*/
     text-decoration: none;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .nav ul li{
-    text-decoration: none;
-    display: inline;
+    display: inline;   /*allows for horizontal ul li navBar*/
     padding: 5px 25px;
 }
 
-.top_main{
+.top_main{     /*contains second nav bar and all text to its right*/
         padding: 10px;
         width: 90%;
         min-height: 10px;
@@ -90,7 +99,7 @@ div.searchBox{
 
 }
 
-.second_navBar{
+.second_navBar{  /* styles second nav bar that's under the long nav bar on the left*/
     margin-left: 20px;
     padding: 10px;
     display: inline-block;
@@ -102,16 +111,16 @@ div.searchBox{
     list-style-position: inside;
 }
 
-.second_navBar ul li{
+.second_navBar ul li{ /*pushes second nav bar's li items away for appearance*/
     margin: 10px;
 }
 
-.second_navBar ul li a{
+.second_navBar ul li a{ /*styles second nav bar's text*/
     color: white;
     font-size: 16px;
 }
 
-.right{
+.right{     /*holds all text to the right of second nav bar*/
     display: inline-block;
     width: 610px;
     min-height: 20px;
@@ -119,7 +128,7 @@ div.searchBox{
     margin-left: 10px;
 }
 
-.hist{
+.hist{      /*styles white text above yellowish ul list*/
     display: inline-block;
     min-height: 20px;
     vertical-align: top;
@@ -128,13 +137,13 @@ div.searchBox{
     color: white;
 }
 
-.zen {
+.zen {    /*contains/shapes yellowish ul list*/
     display: inline-block;
     vertical-align: top;
     width: 100%;
 }
 
-.zen ul{
+.zen ul{  /*styles yellowish ul list below white text */
     text-align: center;
     list-style: none;
     color: #f6ce31;
@@ -142,18 +151,108 @@ div.searchBox{
     font-style: italic;
 }
 
-.zen ul li{
+.zen ul li{  /*pushes yellowish ul list items apart for better appearance*/
     margin: 10px;
 }
 
-.end{
+.end{  /*styles last item below yellowish ul list*/
     font-size: 16px;
     color: white;
     font-style: normal;
 }
 
-.main{
+.main{   /*holds and styles the background of everything seen in white*/
     background-color: white;
     width: 100%;
     min-height: 100px;
+}
+
+.wrapper{ /*sets a container around Getting Started and Applications sections for ease of placement/format*/
+    min-width: 800px;
+    min-height: 10px;
+    margin-left: 100px;
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.main1{     /*styles the Getting Started section border/format*/
+    width: 400px;
+    margin-right: 15px;
+    min-height: 50px;
+    display: inline-block;
+    border-top: 3px solid #73a7d5;
+    vertical-align: top;
+}
+
+.main2{     /*styles the Applicaitons section border/format*/
+    width: 400px;
+    min-height: 50px;
+    display: inline-block;
+    border-top: 3px solid #73a7d5;
+    vertical-align: top;
+}
+
+.mainDiv{  /* Formats the inner parts of the Getting Started and Applications sections*/
+    width: 260px;
+    min-height: 50px;
+    margin-left: 25px;
+    vertical-align: top;
+}
+
+h4{  /*headers of the Getting Started and Applications sections*/
+    text-align: center;
+    padding: 2px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.mainDiv p{   /*paragraphs of the Getting Started and Applications sections*/
+    text-align: center;
+    font-size: 12px;
+}
+
+.mainDiv p a{  /*styles link in Applications section*/
+    color: #8fb8dd;
+    text-decoration: none;
+}
+
+.mainDiv ul li a{   /*styles the lists in the Getting Started and Applications sections*/
+    font-size: 12px;
+    list-style-type: square;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    color: #9abfe0;
+}
+
+.footer{  /* start and end of the blue footer on bottom of page*/
+    background: linear-gradient(#245076,#3274ac);
+    width: 100%;
+    min-height: 50px;
+}
+
+.footwrap{       /*wraps the footer ul li for placement*/
+    display: table;   /*along with display:inline, allows horizontal ul li navbar*/
+    min-width: 500px;
+    min-height: 20px;
+    margin: 0 auto;
+    margin-top: 50px; 
+}
+
+.footwrap ul li {  /*margins of the ul li in the footer*/
+    display: inline;
+    margin-right: 45px;
+    margin-left: 5px;
+}
+
+.footwrap ul li a{  /*styles color and removes underlines of ul in the footer*/
+    color: #8fb8dd;
+    text-decoration: none;
+}
+
+.copy{
+    text-align: center;
+    margin-top: 10px;
+    color: #9abfe0;
+    font-size: 8px;
 }
